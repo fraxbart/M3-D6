@@ -1,0 +1,29 @@
+.titolo{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.jumbotron {
+    padding-bottom: 0 !important;
+}
+
+ul {
+    list-style: none;
+  }
+
+h5{
+    margin-left: 10px;
+}
+
+.tabellafinale{
+    margin-top: 50px;
+}
+
+.titoloultimo{
+    margin-top: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function deleteRow(button) {
+          var riga = button.parentNode.parentNode;
+          riga.parentNode.removeChild(riga);
+        }
+        </script>
+         <script>
+            function aggiungiRiga() {
+              //  corpo della tabella
+              var tableBody = document.getElementById("myTableBody");
+        
+              // Creiamo una nuova riga con tre celle
+              var newRow = document.createElement("tr");
+              var trackCell = document.createElement("td");
+              var artistCell = document.createElement("td");
+              var durationCell = document.createElement("td");
+        
+              // Aggiungiamo il testo alle celle
+              trackCell.innerText = "Nuova traccia";
+              artistCell.innerText = "Nuovo artista";
+              durationCell.innerText = "4:00";
+        
+              // Aggiungiamo le celle alla riga
+              newRow.appendChild(trackCell);
+              newRow.appendChild(artistCell);
+              newRow.appendChild(durationCell);
+        
+              // Aggiungiamo la nuova riga al corpo della tabella
+              tableBody.appendChild(newRow);
+            }
+          </script>
+           
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>M3-D6</title>
+    <link rel="stylesheet" type="text/CSS" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <!--menu iniziale-->
+    <nav class="navbar navbar-expand-lg  bg-dark">
+        <a class="navbar-brand" href="#"><img src="logo.svg"/></a>
+         <a class="navbar-brand" href="#">My Music List</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="#albumpreferiti">Album preferiti<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#albumpnonreferiti">Album non preferiti</a>
+                <a class="nav-link" href="#">Recensioni</a>
+              </div>
+            </div>
+      </nav>
+      <div class="jumbotron bg-success">
+        <div class="row">
+              <div class="col-md-8 text-white"> <!-- 66% dello spazio per l'immagine su schermi di media grandezza e 100% su schermi di piccole dimensioni -->
+               <h1>W la Musicaaaa !!!</h1>
+                 <p>La musica (dal greco antico μουσική, mousikḗ, «arte delle Muse») è l'arte di ideare e produrre, mediante l'uso di strumenti musicali o della voce, successioni strutturate di suoni semplici o complessi, che possono variare per altezza, per intensità e per timbro[1], organizzati secondo le dimensioni di melodia, armonia e ritmo.[2] È uno degli aspetti culturali universali di tutte le società umane.
+                        Il significato del termine musica non è comunque univoco ed è molto dibattuto tra gli studiosi per via delle diverse accezioni utilizzate 
+                        nei vari periodi storici. Etimologicamente il termine musica deriva dall'aggettivo greco μουσικός/musikòs, relativo alle Muse, figure della mitologia greca e romana, 
+                        riferito in modo sottinteso a tecnica, anch'esso derivante dal greco τέχνη/techne. 
+                        In origine il termine non indicava una particolare arte, bensì tutte le arti delle Muse, e si riferiva a qualcosa di "perfetto".</p>
+                    <a class="btn btn-primary btn-lg bg-warning text-danger" href="#" role="button">Learn more</a>
+              </div>
+              <div class="col-md-4"> <!-- 33% dello spazio per la descrizione su schermi di media grandezza e 100% su schermi di piccole dimensioni -->
+                <img src="hero-img.png" class="img-fluid" alt="Immagine">
+              </div>
+            </div> 
+      </div>
+
+      <div class="titolo">
+        <h1>Il mio album preferito</h1>
+      </div>
+
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="ghost.jpg">
+            </div>
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Titolo</th>
+                          <th scope="col">Band</th>
+                          <th scope="col">Durata</th>
+                          <th scope="col">Genere</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Another's Arms</td>
+                          <td>Coldplay</td>
+                          <td>3:54</td>
+                          <td>Rock alternativo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Magic</td>
+                          <td>Coldplay</td>
+                          <td>4:45</td>
+                          <td>Rock alternativo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Ink</td>
+                          <td>Coldplay</td>
+                          <td>3:48</td>
+                          <td>Synth pop</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>A Sky Full of Stars</td>
+                            <td>Coldplay</td>
+                            <td>4:28</td>
+                            <td>Synth pop</td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>True Love</td>
+                            <td>Coldplay</td>
+                            <td>4:06</td>
+                            <td>Rock alternativo</td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Always in My Head</td>
+                            <td>Coldplay</td>
+                            <td>3:37</td>
+                            <td>Synth pop</td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Midnight</td>
+                            <td>Coldplay</td>
+                            <td>4:55</td>
+                            <td>Rock alternativo</td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Oceans</td>
+                            <td>Coldplay</td>
+                            <td>5:22</td>
+                            <td>Synth pop</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+      
+</div>
+      <!--titolo iniziale-->
+
+      <div class="titolo">
+        <h1>La mia Playlist preferita</h1>
+      </div>
+
+    
+      
+      <!--sezione preferiti 4 imm quando è grande e 2 imm quando è piccolo-->
+
+      <div id="albumpreferiti">
+        <div class="container text-center">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+                <div class="col">
+                    <div class="card">
+                <img src="Nevermind.webp">
+                <h4>NeverMind</h4>
+                <p>Nevermind è ritenuto uno degli album fondamentali degli anni novanta e della storia del rock in generale. Venne classificato alla posizione 17 della lista dei 
+                    500 migliori album secondo Rolling Stone[25] e alla terza posizione nella classifica dei 100 migliori album di sempre stilata dalla rivista britannica Q.[26] 
+                    Nel 2005 Nevermind è stato inserito nella National Recording Registry dalla Biblioteca del Congresso degli Stati Uniti d'America</p>
+                    <span>Genere : Rock</span> <span>4:30</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="jones.jpg">
+                        <h4>Jones</h4>
+                        <p>L'album è composto da 14 brani. Puertosol e Follia del mattino sono i due videoclip e singoli estratti 
+                            dal disco: il primo il 3 luglio 2019, il secondo il 18 dicembre 2019.[4] All'interno dell'album 
+                            è presente una sola collaborazione, ovvero quella con Fabri Fibra. L'8 novembre parte la promozione 
+                            del disco con firmacopie in tutta Italia</p>
+                            <span>Genere : Jazz</span> <span>3:30</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="download.jfif">
+                        <h4>Nina Simone</h4>
+                        <p>Nina Simone, pseudonimo di Eunice Kathleen Waymon (Tryon, 21 febbraio 1933 – Carry-le-Rouet, 21 aprile 2003), è stata una cantante, pianista, scrittrice e attivista per i diritti civili statunitense.
+                         È stata soprattutto un'interprete jazz, anche se la sua formazione era incentrata sulla musica classica[2] e il suo stile variava fra diversi generi, dal soul, al blues, al folk, al gospel e persino il jazz.
+                            La rivista Rolling Stone l'ha posizionata al 29º posto nella lista dei 100 migliori cantanti di tutti i tempi.</p>
+                            <span>Genere : Pop</span> <span>2:40</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="download.jfif">
+                        <h4>Nina Simone</h4>
+                        <p>Nina Simone, pseudonimo di Eunice Kathleen Waymon (Tryon, 21 febbraio 1933 – Carry-le-Rouet, 21 aprile 2003), è stata una cantante, pianista, scrittrice e attivista per i diritti civili statunitense.
+                         È stata soprattutto un'interprete jazz, anche se la sua formazione era incentrata sulla musica classica[2] e il suo stile variava fra diversi generi, dal soul, al blues, al folk, al gospel e persino il jazz.
+                            La rivista Rolling Stone l'ha posizionata al 29º posto nella lista dei 100 migliori cantanti di tutti i tempi.</p>
+                            <span>Genere : Pop</span> <span>2:40</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+        <div class="col">
+      <div class="card-body row">
+        <h5 class="card-title">Numero Uno in Playlist</h5>
+        <ul>
+            <i class="bi bi-people"></i>
+            <li>Titolo Album : Never Mind</li>
+            <li>Cantante :  Nirvana</li>
+            <li>Anno di uscita : 2014</li>
+          </ul>
+        </div>
+         </div>
+         <div class="col">
+            <div class="card-body row">
+                <h5 class="card-title">Numero due in Playlist</h5>
+                <ul>
+                    <i class="bi bi-people"></i>
+                    <li>Titolo Album : Music Fantastic</li>
+                    <li>Cantante :  Jones</li>
+                    <li>Anno di uscita : 2020</li>
+                  </ul>
+              </div>
+               </div>
+               <div class="col">
+                <div class="card-body row">
+                    <h5 class="card-title">Numero tre in Playlist</h5>
+                    <ul>
+                        <i class="bi bi-people"></i>
+                        <li>Titolo Album : DiscoYee</li>
+                        <li>Cantante :  Nina Simomne</li>
+                        <li>Anno di uscita : 1999</li>
+                      </ul>
+                  </div>
+                   </div>
+                   <div class="col">
+                    <div class="card-body row">
+                        <h5 class="card-title">Numero quattro in Playlist</h5>
+                        <ul>
+                            <i class="bi bi-people"></i>
+                            <li>Titolo Album : I am Blue</li>
+                            <li>Cantante :  Nina Simone</li>
+                            <li>Anno di uscita : 2011</li>
+                          </ul>
+                      </div>
+                       </div>
+         </div>
+            </div>
+
+
+      <!--non preferiti 4 imm quando è grande e 2 imm quando è piccolo-->
+
+      <div class="titolo">
+        <h1>La mia Playlist Non preferita</h1>
+      </div>
+
+      <div id="albumpnonreferiti">
+        <div class="container text-center">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+                <div class="col">
+                    <div class="card">
+                <img src="Jovanotti.jpg">
+                <h4>Jonanotti</h4>
+                <p>Diventa famoso alla fine degli anni ottanta, lanciato da Claudio Cecchetto, si discosta ben presto dalla commistione di hip hop[4] dei primi successi, 
+                    avvicinandosi gradualmente al modello della world music (sempre interpretata in chiave hip hop e funky).[1] All'evoluzione musicale corrisponde un 
+                    mutare dei testi dei suoi brani, che, nel corso degli anni, tendono a toccare temi sempre più personali, 
+                    più tipici dello stile cantautorale italiano, riuscendo a unire hip-hop, funky e cantautorato in uno stile tutto suo.</p>
+                    <span>Genere : Rap</span> <span>4:30</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="killa.jpg">
+                        <h4>Jones</h4>
+                        <p>Dopo le scuole medie in paese, il rapper ha frequentato un istituto tecnico e successivamente un alberghiero
+                             senza ottenere il diploma, in quanto ha abbandonato in anticipo gli studi per iniziare a lavorare, tra le altre cose come muratore. 
+                             Alla fine si è dedicato alla musica, principalmente al freestyle.[2] In quel periodo, Emiliano Rudolf veniva 
+                            chiamato Emilietto (o Emilietto lo zarro);[3] successivamente nel 2007 mentre partecipava al contest di freestyle Tecniche Perfette adotta il nome di Emis Killa</p>
+                            <span>Genere : Trap</span> <span>4:30</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="fedez.webp">
+                        <h4>Nina Simone</h4>
+                        <p>Nel 2007 ha realizzato il suo primo EP Pat-a-Cake, mentre tre anni più tardi ha pubblicato il suo primo 
+                            mixtape BCPT, a cui hanno collaborato artisti appartenenti alla scena rap italiana come Emis Killa, G. Soave e Maxi B. 
+                            Due anni più tardi esordisce su palcoscenici più ampi in qualità di seconda voce durante le esibizioni dal vivo del rapper Fadamat,[9] 
+                            mentre nel 2010 ha pubblicato il secondo EP Diss-Agio, in collaborazione con Vincenzo da Via Anfossi e Dinamite e prodotto da JT..</p>
+                            <span>Genere : Metal</span> <span>4:30</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="fedez.webp">
+                        <h4>Nina Simone</h4>
+                        <p>Nel 2007 ha realizzato il suo primo EP Pat-a-Cake, mentre tre anni più tardi ha pubblicato il suo primo 
+                            mixtape BCPT, a cui hanno collaborato artisti appartenenti alla scena rap italiana come Emis Killa, G. Soave e Maxi B. 
+                            Due anni più tardi esordisce su palcoscenici più ampi in qualità di seconda voce durante le esibizioni dal vivo del rapper Fadamat,[9] 
+                            mentre nel 2010 ha pubblicato il secondo EP Diss-Agio, in collaborazione con Vincenzo da Via Anfossi e Dinamite e prodotto da JT..</p>
+                            <span>Genere : Metal</span> <span>4:30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="titolo">
+        <h1>Best Album Cover</h1>
+      </div>
+
+      <!--tutte le copertine 4x4-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <img src="ichnjisan_AlbumCover.avif" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!--tabella finale-->
+
+      <div class="titoloultimo">
+        <h1>Final Table</h1>
+      </div>
+      
+      <div class="tabellafinale">
+      <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Traccia</th>
+              <th>Titolo</th>
+              <th>Artista</th>
+              <th>Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>About a girl</td>
+              <td>Nirvana</td>
+              <td>3:45</td>
+              <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Karaoke</td>
+              <td>Jones</td>
+              <td>4:12</td>
+              <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Mediterranea</td>
+              <td>Nina Simone</td>
+              <td>2:55</td>
+              <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Good times</td>
+              <td>Nina Simone</td>
+              <td>5:10</td>
+              <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rapide</td>
+                <td>Jovanotti</td>
+                <td>5:10</td>
+                <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Mamacita</td>
+                <td>Jones</td>
+                <td>5:10</td>
+                <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Bando</td>
+                <td>Nina Simone</td>
+                <td>5:10</td>
+                <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Don't start now</td>
+                <td>Nina Simone</td>
+                <td>5:10</td>
+                <td><button class="btn bg-danger text-white" onclick="deleteRow(this)">Elimina</button></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!--aggiungi una riga-->
+
+    <div class="container">
+        <div class="btn d-flex justify-content-center">
+        <button type="button" class="btn bg-danger text-white" onclick="aggiungiRiga()">Aggiungi riga</button>
+       </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Numero traccia</th>
+                    <th>Titolo della traccia</th>
+                    <th>Nome artista</th>
+                    <th>Durata traccia</th>
+                </tr>
+              </thead>
+          <tbody id="myTableBody">
+            <tr>
+              <td>Traccia 2</td>
+              <td>Artista 2</td>
+              <td>3:45</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
